@@ -9,7 +9,20 @@ public class Main {
         Email email = new Email("accio@gmail.com");
         email.changePassword("Accio@123", "V12@");
         email.changePassword("Acio@123", "V12@v");
-        email.changePassword("Accio@123", "Vvv@vee");
+        email.changePassword("Accio@123", "VV2@JJJ");
+        email.changePassword("Accio@123", "Pass@1");
+        System.out.println(email.getPassword());
+        email.changePassword("Accio@123", "password@123");
+
+        System.out.println(email.getPassword());
+        email.changePassword("WrongPassword", "NewPassword@123");
+
+        System.out.println(email.getPassword());
+        email.changePassword("Accio@123", "Pass@1");
+
+        System.out.println(email.getPassword());
+        email.changePassword("Accio@123", "PASSWORD@123");
+
         System.out.println(email.getPassword());
 
         Gmail gmail = new Gmail("accio@gmail.com", 3);

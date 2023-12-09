@@ -4,11 +4,7 @@ public class Email {
 
     private String emailId;
     private String password;
-   private boolean lensize;
-    private boolean upper;
-   private boolean lower;
-    private boolean digit;
-   private boolean special;
+
 
     public Email(String emailId){
         this.emailId = emailId;
@@ -24,6 +20,11 @@ public class Email {
     }
 
     public void changePassword(String oldPassword, String newPassword){
+         boolean lensize=false;
+         boolean upper=false;
+         boolean lower=false;
+         boolean digit=false;
+         boolean special=false;
 
         if(!oldPassword.equals(password))
             return;
