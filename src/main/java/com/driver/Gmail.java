@@ -39,7 +39,7 @@ public class Gmail extends Email {
             j++;
         }
         if(i>=0)
-            mailList.remove(i);
+            trashList.add(mailList.remove(i));
         // Each message is distinct
         // If the given message is found in any mail in the inbox, move the mail to trash, else do nothing
 
