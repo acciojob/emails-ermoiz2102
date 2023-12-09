@@ -4,6 +4,11 @@ public class Email {
 
     private String emailId;
     private String password;
+   private boolean lensize;
+    private boolean upper;
+   private boolean lower;
+    private boolean digit;
+   private boolean special;
 
     public Email(String emailId){
         this.emailId = emailId;
@@ -19,6 +24,34 @@ public class Email {
     }
 
     public void changePassword(String oldPassword, String newPassword){
+
+        if(!oldPassword.equals(password))
+            return;
+        if(newPassword.length()<8)
+                return;
+        lensize=true;
+        for(char c:newPassword.toCharArray()){
+            if(c>='A'&&c<='Z'){
+                if(upper)continue;
+                upper=true;
+            }
+            else if(c>='a'&&c<='z'){
+                if(lower)continue;
+                lower=true;
+            }
+            else if(c>='0'&&c<='1'){
+                if(digit)continue;
+                digit =true;
+            }
+            else{
+                if(special)continue;
+                special=true;
+            }
+
+        }
+        if(lensize&&upper&&lower&&digit&&special)
+            password=newPassword;
+
         //Change password only if the oldPassword is equal to current password and the new password meets all of the following:
         // 1. It contains at least 8 characters
         // 2. It contains at least one uppercase letter
