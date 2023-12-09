@@ -33,15 +33,14 @@ public class Email {
         lensize=true;
         for(char c:newPassword.toCharArray()){
             if(c>='A'&&c<='Z'){
-                if(upper)continue;
+
                 upper=true;
             }
             else if(c>='a'&&c<='z'){
-                if(lower)continue;
+
                 lower=true;
             }
-            else if(c>='0'&&c<='1'){
-                if(digit)continue;
+            else if(c>='0'&&c<='9'){
                 digit =true;
             }
             else{

@@ -21,7 +21,7 @@ public class Main {
         email.changePassword("Accio@123", "Pass@1");
 
         System.out.println(email.getPassword());
-        email.changePassword("Accio@123", "PASSWORD@123");
+        email.changePassword("Accio@123", "NewPassword@123");
 
         System.out.println(email.getPassword());
 
